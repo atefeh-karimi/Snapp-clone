@@ -1,0 +1,718 @@
+html {
+  direction: rtl;
+}
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  list-style: none;
+  box-sizing: border-box;
+}
+li {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+
+:root {
+  --color-text: rgb(63, 63, 63);
+  --color-border-nav: rgb(229, 229, 229);
+  --color-border-header: rgb(64, 64, 64);
+  --color-primary: rgb(33, 170, 88);
+}
+
+@font-face {
+  font-family: iransans;
+  src: url(./fonts/iransans/woff/IRANSansX-Regular.woff);
+}
+
+@font-face {
+  font-family: iransans;
+  src: url(./fonts/iransans/woff/IRANSansX-Bold.woff);
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: iransans;
+  src: url(./fonts/iransans/woff/IRANSansX-DemiBold.woff);
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: iransans;
+  src: url(./fonts/iransans/woff/IRANSansX-Medium.woff);
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: iransans;
+  src: url(./fonts/iransans/woff/IRANSansX-Light.woff);
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: iransans;
+  src: url(./fonts/iransans/woff/IRANSansX-Thin.woff);
+  font-weight: 200;
+}
+
+body {
+  direction: rtl;
+  font-family: iransans;
+  color: #3f3f3f;
+}
+
+/* =====================NAVBAR==================== */
+.nav__containr {
+  padding: 2rem 0;
+  display: flex;
+  border-bottom: 1px solid var(--color-border-nav);
+  position: fixed;
+  background-color: white;
+  z-index: 10;
+}
+
+.fas {
+  display: none;
+}
+
+.nav__img {
+  padding-right: 6%;
+}
+
+.nav__menu {
+  display: flex;
+  margin-bottom: 0;
+  padding-right: 12px;
+}
+
+.nav__menu li {
+  margin: 0 11px;
+}
+
+.nav__menu li a {
+  color: var(--color-text);
+  font-size: 15px;
+  font-family: iranSans;
+  font-weight: 300;
+}
+
+/* =====================HEADER==================== */
+.header__container {
+  padding-top: 91px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+header .container-fluid {
+  padding-right: 0 !important;
+  padding-left: 0 !important;
+}
+
+.header__img img {
+  width: 100%;
+  height: 100%;
+}
+
+.header__text {
+  background-color: var(--color-primary);
+  color: white;
+  padding: 32px 150px 32px 24px;
+}
+
+.header__text h1 {
+  font-size: 36px;
+  line-height: 52px;
+  font-weight: bold;
+  margin-bottom: 16px;
+  font-family: iransans;
+  font-weight: bold;
+}
+
+.header__text p {
+  padding: 16px 0;
+  font-size: 20px;
+  line-height: 34px;
+  font-family: iransans;
+}
+
+.header__form {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.header__form-input {
+  position: relative;
+  height: auto;
+}
+
+.header__form-input input {
+  background-color: transparent;
+  border-bottom: 1px solid white;
+  padding: 0 8px 9px 8px;
+  color: white;
+}
+
+.header__form-input input::placeholder {
+  color: lightgray;
+  opacity: 0.6;
+}
+
+.header__form-input span {
+  font-size: 9px;
+  position: absolute;
+  padding: 0 8px;
+  top: 7px;
+  left: 4px;
+}
+
+.header__form-btn {
+  padding: 8px 22px;
+  margin-right: 18px;
+  background-color: white;
+  color: rgb(0, 209, 111);
+  border-radius: 6px;
+  cursor: pointer;
+  font-family: iransans;
+  font-weight: 600;
+  align-self: flex-start;
+}
+
+.header__btn {
+  margin-top: 2rem;
+  padding: 12px 32px;
+  background-color: transparent;
+  border: 1px solid white;
+  border-radius: 6px;
+  color: white;
+  font-family: iransans;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.header__btn:hover {
+  background-color: rgb(16, 165, 96);
+}
+
+.header__btn.is-mobile {
+  display: none;
+}
+
+/* =====================DOWNAPPS==================== */
+.downApps {
+  height: 30vh;
+  padding: 4rem 3rem;
+}
+
+.downApps__container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.app img {
+  width: 160px;
+  height: 50px;
+  margin: 2rem 1rem;
+}
+
+/* =====================HERO==================== */
+.hero {
+  padding: 3rem 0;
+  background-color: rgb(242, 245, 248);
+}
+
+.hero__container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+.hero > h1 {
+  padding-bottom: 2rem;
+  font-family: iransans;
+  font-weight: bold;
+  color: var(--color-text);
+  font-size: 36px;
+  text-align: center;
+}
+
+.hero__card {
+  display: flex;
+  align-content: center;
+  align-items: center;
+  background-color: white;
+  border-radius: 18px;
+  cursor: pointer;
+  padding: 8px;
+  color: #3f3f3f;
+  line-height: 27px;
+  margin: 16px;
+  max-width: 321px;
+  width: 33%;
+  height: 92px;
+}
+
+.hero__card img {
+  margin: 0 8px;
+  height: 62px;
+  width: 62px;
+}
+
+.hero__card h1 {
+  font-family: iransans;
+  font-weight: bold;
+  font-size: 16px;
+  margin: 4px 0;
+  color: rgb(63, 63, 63);
+}
+
+.hero__card p {
+  color: rgb(163, 163, 163);
+  font-family: iransans;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 23px;
+  text-align: right;
+  margin-bottom: 0;
+}
+
+/* =====================CARUSEL==================== */
+.carusel {
+  padding: 24px 0;
+  margin: 32px 0;
+}
+
+.carusel .container {
+  position: relative;
+  width: 90%;
+  overflow: hidden;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.carusel__images {
+  text-align: center;
+  position: relative;
+  display: inline-flex;
+  width: 100%;
+  flex-direction: row-reverse;
+  transition: 0.7s;
+}
+
+.carusel__img {
+  cursor: pointer;
+  width: 100%;
+  flex-shrink: 0;
+  border-radius: 9px;
+}
+
+.carosel__buttons {
+  position: absolute;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  padding: 3px;
+  left: 50%;
+  bottom: 20px;
+  transform: translateX(-50%);
+  text-align: center;
+  border-radius: 18px;
+  background-color: hsla(0, 0%, 100%, 0.18);
+}
+
+.carusel__btn {
+  margin: 0 3px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  cursor: pointer;
+  background-color: hsla(0, 0%, 100%, 0.31);
+}
+
+.active {
+  background-color: white;
+}
+
+.carusel__img-selected {
+  display: block;
+}
+
+/* =====================FEATURES==================== */
+.features {
+  position: relative;
+  padding-bottom: 250px;
+  margin-bottom: 1rem;
+}
+
+.features__header {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: flex-start;
+  align-content: center;
+}
+
+.features__img {
+  background-image: url(./images/asghar-image.jpg);
+  background-size: cover;
+  background-position: left center;
+  height: 50vh;
+  min-height: 450px;
+  width: 100%;
+}
+
+.features__info {
+  line-height: 24px;
+  font-size: 16px;
+  padding: 40px 40px 0 120px;
+}
+
+.features__info h2 {
+  padding-bottom: 2rem;
+  font-size: 24px;
+  font-family: iransans;
+  font-weight: bold;
+}
+
+.features__info p {
+  font-family: iransans;
+  font-weight: 300;
+  font-size: 14px;
+  text-align: right;
+}
+
+.features__cards {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.featureCard {
+  margin-left: 24px;
+  font-size: 11px;
+  line-height: 20px;
+  text-align: right;
+  max-width: 300px;
+}
+
+.featureCard__img {
+  text-align: center;
+  background: #f2f5f8;
+  border-radius: 18px;
+}
+
+.featureCard h2 {
+  margin: 12px;
+  font-size: 16px;
+  font-weight: bold;
+  font-family: iransans;
+}
+
+.featureCard p {
+  padding: 5px;
+}
+
+/* =====================SIGNIN==================== */
+.signIn {
+  background: #f2f5f8;
+  padding: 2rem 0;
+  text-align: center;
+}
+
+.signIn__info h2 {
+  font-weight: bold;
+}
+
+.signIn__info p {
+  padding: 1rem 0;
+  font-size: 18px;
+}
+
+.signIn__info button {
+  color: white;
+  background-color: rgb(0, 209, 112);
+  font-weight: bold;
+  font-size: 17px;
+  padding: 12px 24px;
+  margin-bottom: 16px;
+  border-radius: 6px;
+}
+
+.signIn__video {
+  margin: 40px 0;
+  text-align: center;
+}
+
+.signIn__video video {
+  width: 100%;
+  object-fit: contain;
+  border-radius: 9px;
+}
+
+.signIn__benefits {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  row-gap: 2rem;
+  align-items: center;
+  align-content: center;
+  margin-top: 4rem;
+}
+
+.signIn__benefit-card {
+  background-color: white;
+  color: rgb(64, 64, 64);
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  padding: 2rem;
+  line-height: 27px;
+  border-radius: 18px;
+  height: 100%;
+}
+
+.signIn__benefit-text {
+  text-align: right;
+}
+
+.signIn__benefit-text h1 {
+  font-size: 16px;
+  font-weight: bold;
+  padding: 8px 0;
+  margin-bottom: 0;
+}
+
+.signIn__benefit-text p {
+  font-size: 14px;
+  margin-bottom: 0;
+}
+
+/* =====================FOOETR==================== */
+footer {
+  padding: 2rem 0;
+}
+
+.footer__container {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* ===========================MEDIA QUERIES(TABLET and under)============================= */
+@media (max-width: 768px) {
+  /* =====================NAv==================== */
+  nav {
+    position: fixed;
+    width: 100%;
+    z-index: 50;
+    top: 0;
+  }
+
+  .nav__containr {
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 0;
+  }
+
+  nav .nav__menu {
+    display: none;
+  }
+
+  .fas {
+    display: block;
+    font-size: 18px;
+    padding-right: 6%;
+  }
+
+  .nav__img {
+    padding-left: 6%;
+    order: 10;
+  }
+
+  /* =====================HEADER==================== */
+  header {
+    margin-top: 63px;
+  }
+
+  .header__container {
+    padding-top: 0;
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .header__img img {
+    min-height: 30vh;
+  }
+
+  .header__text {
+    padding: 16px 24px;
+    order: 10;
+  }
+
+  .header__text p {
+    font-size: 17px;
+  }
+
+  .header__text h1 {
+    font-size: 30px;
+  }
+
+  .header__form {
+    display: none;
+  }
+
+  .header__btn {
+    width: 100%;
+    background-color: white;
+    color: var(--color-text);
+  }
+
+  .header__btn:hover {
+    color: white;
+  }
+
+  .header__btn.is-mobile {
+    /* should be visible */
+    display: block;
+  }
+
+  .header__btn.is-desktop {
+    display: none;
+  }
+
+  /* =====================DOWMAPPS==================== */
+  .downApps {
+    display: none;
+  }
+
+  /* =====================HERO==================== */
+  .hero > h1 {
+    font-size: 20px;
+  }
+
+  .hero__container {
+    padding: 0 48px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+    margin: 0;
+  }
+
+  .hero__card {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    width: 100%;
+    padding: 12px 8px;
+    border-radius: 24px;
+    height: 100%;
+    justify-content: center;
+  }
+
+  .hero__card-text p {
+    display: none;
+  }
+
+  .hero__card h1 {
+    font-size: 14px;
+    text-align: center;
+    color: var(--color-text);
+    margin-bottom: 0;
+  }
+
+  .hero__card img {
+    width: 48px;
+    height: 48px;
+  }
+
+  /* =====================FEATURES=================== */
+  .features {
+    padding-bottom: 16px;
+  }
+
+  .features__info h2 {
+    padding-top: 18px;
+    font-size: 22px;
+  }
+
+  .features__info {
+    padding: 18px;
+  }
+
+  .features__header {
+    grid-template-columns: 1fr;
+    align-items: flex-start;
+    align-content: center;
+  }
+
+  .features__cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    position: relative;
+    margin-top: 2rem;
+  }
+
+  .featureCard {
+    margin-left: 0;
+    max-width: unset;
+    width: 100%;
+  }
+
+  /* =====================SIGN IN=================== */
+  .signIn__info h2 {
+    font-size: 36px;
+  }
+
+  .signIn__info p {
+    line-height: 34px;
+    font-size: 20px;
+    font-weight: 300;
+  }
+
+  .signIn__benefits {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    row-gap: 2rem;
+    align-items: center;
+    align-content: center;
+    margin-top: 4rem;
+  }
+
+  .signIn__benefit-card {
+    height: unset;
+    flex-direction: column;
+  }
+
+  /* ====================FOOTER=================== */
+  .footer__container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  footer .nav__menu {
+    flex-wrap: wrap;
+    margin-bottom: 16px;
+    justify-content: center;
+    gap: 8px;
+  }
+
+  .footer__socials {
+    text-align: center;
+  }
+
+  .footer__socials > * {
+    margin: 0 0.25rem;
+  }
+}
